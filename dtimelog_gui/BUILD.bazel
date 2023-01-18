@@ -1,0 +1,17 @@
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc")
+
+package(default_visibility = ["//visibility:public"])
+
+rust_binary(
+    name = "hello_world_gui",
+    srcs = ["src/main.rs"],
+    deps = [
+        "//dtimelog_lib:hello_lib",
+        "@crate_index//:iced",
+    ],
+)
+
+rust_doc(
+    name = "hello_world_gui_doc",
+    crate = ":hello_world_gui",
+)
