@@ -10,6 +10,7 @@ readme = "README.md"
 
 [dependencies]
 dtimelog_lib={ path="../dtimelog_lib"}
+clap = "4.1.1"
 
 [package.metadata.deb]
 maintainer = "David Oberacker <developer@oberacker.me>"
