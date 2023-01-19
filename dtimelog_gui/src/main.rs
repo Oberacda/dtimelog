@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use iced::theme::{self, Theme};
 use iced::widget::{
     button, checkbox, column, container, horizontal_rule, progress_bar, radio, row, scrollable,

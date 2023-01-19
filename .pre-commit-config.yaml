@@ -15,8 +15,6 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
-      - id: check-shebang-scripts-are-executable
-      - id: check-executables-have-shebangs
       - id: fix-byte-order-marker  # Forbid UTF-8 byte-order markers
   - repo: https://github.com/doublify/pre-commit-rust
     rev: v1.0
