@@ -1,0 +1,26 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-xml
+      - id: check-toml
+      - id: check-json
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: check-shebang-scripts-are-executable
+      - id: check-executables-have-shebangs
+      - id: fix-byte-order-marker  # Forbid UTF-8 byte-order markers
+  - repo: https://github.com/kykosic/pre-commit-rust.git
+    rev: 0.2.0
+    hooks:
+      - id: cargo-fmt
+      - id: cargo-check
+      - id: cargo-clippy

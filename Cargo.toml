@@ -1,0 +1,7 @@
+[workspace]
+resolver="2"
+members = [
+    "dtimelog_lib",
+    "dtimelog_cli",
+    "dtimelog_gui"
+]
