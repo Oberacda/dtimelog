@@ -24,3 +24,6 @@ repos:
       - id: fmt
       - id: cargo-check
       - id: clippy
+
+ci:
+  skip: ["fmt", "cargo-check", "clippy"]
