@@ -1,9 +1,26 @@
 [package]
 name = "dtimelog_cli"
 version = "0.1.0"
+description = "A CLI tool to log activities over a workday. Inspired by gtimelog."
 edition = "2021"
+license="MIT"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 dtimelog_lib={ path="../dtimelog_lib"}
+
+[package.metadata.deb]
+maintainer = "David Oberacker <developer@oberacker.me>"
+copyright = "2022, David Oberacker <developer@oberacker.me>"
+extended-description = """\
+A CLI tool to log activities over a workday. Inspired by gtimelog \
+"""
+depends = "$auto"
+section = "utility"
+priority = "optional"
+assets = [
+    ["target/release/dtimelog_cli", "usr/bin/dtimelog", "755"],
+    ["README.md", "usr/share/doc/dtimelog/README", "644"],
+]
