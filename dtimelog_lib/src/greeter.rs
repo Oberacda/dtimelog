@@ -64,6 +64,14 @@ impl Greeter {
     /// greeter.greet("World");
     /// ```
     pub fn greet(&self, thing: &str) {
+        let connection = sqlite::open("dtimelog.db").unwrap();
+
+        let query = "
+            CREATE TABLE users (name TEXT, age INTEGER);
+            INSERT INTO users VALUES ('Alice', 42);
+            INSERT INTO users VALUES ('Bob', 69);
+        ";
+        connection.execute(query).unwrap();
         println!("{} {}", &self.greeting, thing);
     }
 }
